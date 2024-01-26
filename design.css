@@ -1,0 +1,36 @@
+/* Simple CSS rules */
+
+body {
+    background-color: deeppink;
+    padding: 10vw;
+}
+
+h1 {
+    color: white;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 800;
+    font-size: 4rem; /* standard typewriter font size is 1 rem */
+}
+
+
+
+.box1 {
+    background-color: whitesmoke;
+    width: 20vw;
+    height: 20vw;
+    padding: 2vw; /* internal distance */
+    margin: 2vw; /* external distances */
+    color: red;
+    border: 10px solid #000;
+    border-radius: 40px 40px 0 40px;
+    box-shadow: 0 5px 10px 0 #61072e;
+    transition-property: all;
+    transition-duration: 0.5s;
+ }
+
+ .box1:hover {
+    background-color: darkorange;
+    color: white;
+    transition-property: all;
+    transition-duration: 1s;
+ }
