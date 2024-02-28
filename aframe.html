@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://aframe.io/releases/1.4.1/aframe.min.js"></script>
+ 
+ <style>
+
+  body {
+    
+  }
+
+  h1 {color: white;}
+
+    canvas {
+      z-index: -1;
+    }
+
+ </style>
+ 
+ 
+ 
+  </head>
+  <body>
+
+    <div class="overlay">
+      <h1>Hallo World</h1>
+    </div>
+
+      <a-scene antilias="true" fog="type: linear; color: #000; near: 8; far: 40" >
+
+        <a-assets> <!-- this stuff has to  be loaded at the beginning -->
+            <img id="stone" src="stone.jpg">
+        </a-assets>
+          
+        <a-sky color="#000"></a-sky>
+
+          <a-box position="0 0 0" height="1" width="100" depth="100" color="orange" shadow="receive: true"    ></a-box> <!-- plane -->
+          
+            <a-box position="-5 5 -10"  height="10" width="5" depth="5" color="red" shadow="cast: true"></a-box>
+            <a-box position="0 5 -20" material="src: #stone" height="10" width="5" depth="5"  shadow="cast: true"></a-box>
+            <a-box position="5 5 -30"  height="10" width="5" depth="5" color="red" shadow="cast: true"></a-box>
+
+            <a-entity position="10 1 -30"
+            
+            animation="property: position; to: 10 1 30; loop: true; dur: 10000; easing: linear"
+            
+            >
+              <a-box   height="1.5" width="2" depth="3" color="yellow" shadow="cast: true"></a-box>
+              <a-sphere position="0.4 0 1.5" radius="0.1"  color="white"></a-sphere>
+              <a-sphere position="-0.4 0 1.5" radius="0.1" color="white"></a-sphere>
+            </a-entity>  
+
+
+
+
+          <a-light type="point" light="castShadow:true;shadowCameraVisible: true;" position="100 100 0" intensity="1"></a-light>
+
+
+
+      </a-scene>
+ 
+
+
+  </body>
+</html>
+
+
+
+
+
+

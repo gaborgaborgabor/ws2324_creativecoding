@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://aframe.io/releases/1.4.1/aframe.min.js"></script>
+  </head>
+  <body>
+
+
+
+    <a-scene antilias="true" fog="type: linear; color: #000; near: 10; far: 100">
+
+      <a-assets>
+        <img id="floor" src="media/stone.jpg">
+      </a-assets>  
+
+
+
+      <a-sky color="#000"></a-sky>
+      
+      <a-box class="ground" position="0 -1 -5"  color="red" height="1" width="10" depth="10" shadow="receive: true"></a-box>
+
+      <a-box id="wall" material="shader: flat; src: #floor" position="0 0 -5" color="yellow" height="1" width="1" depth="1" shadow="cast: true"
+      animation="property: position; to: 0 0 -10; dur: 10000; dir: alternate; easing: easeInOutQuad; loop: true"
+      ></a-box>
+
+
+      <a-light type="directional" light="castShadow:true;shadowCameraVisible: true;" target="#wall" position="3 5 -5" intensity="1" shdadow-camera-automatic="#wall"></a-light>
+
+      
+
+    </a-scene>
+
+
+
+  </body>
+</html>
+
+
+
+
+
+
